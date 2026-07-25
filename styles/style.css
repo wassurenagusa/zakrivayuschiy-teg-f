@@ -1,16 +1,410 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #e7e7e7 0%, #1a1a1a 100%);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  font-family: var(--text-font), sans-serif;
+  font-variation-settings: 'wght' var(--text-font), 'slnt' var(--text-slnt);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 0;
+  padding: var(--header-padding) 0;
+  inline-size: var(--width);
+  background-color: #FFF;
+  border: var(--border-content);
+  font-family: var(--accent-font), sans-serif;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-transform: uppercase;
+}
+
+.header__text {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.card:first-of-type {
+  margin-top: 100px;
+}
+
+.card {
+  margin: 0 auto 50px;
+  padding-bottom: 25px;
+  inline-size: var(--width);
+  border: var(--border-content);
+  background-color: #FFF;
+}
+
+.card__title {
+  --text-wght: 715;
+
+  padding: 4px 10px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.card__text {
+  margin: 25px;
+  font-size: 18px;
+}
+
+.card__text:last-of-type {
+  margin-block-end: 0;
+}
+
+.card__wrapper {
+  position: relative;
+  width: var(--size-img);
+  height: var(--size-img);
+  border-block: var(--border-content);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.card__wrapper-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 95%;
+}
+
+.card__wrapper.image-2 .card__wrapper-img {
+  filter: var(--img-filter-card-2);
+}
+
+.card__wrapper.image-3 .card__wrapper-img {
+  filter: var(--img-filter-card-3);
+}
+
+.card__wrapper.image-4 .card__wrapper-img {
+  filter: var(--img-filter-card-4);
+}
+
+.card__wrapper.image-5 .card__wrapper-img {
+  filter: var(--img-filter-card-5);
+}
+
+.card__wrapper.image-6 .card__wrapper-img {
+  filter: var(--img-filter-card-6);
+}
+
+.card__wrapper.image-7 .card__wrapper-img {
+  filter: var(--img-filter-card-7);
+}
+
+.card__wrapper.image-8 .card__wrapper-img {
+  filter: var(--img-filter-card-8);
+}
+
+.card__wrapper-label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  mix-blend-mode: hard-light;
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: var(--text-stroke);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@supports (text-stroke: 1px #FFF) {
+  .card__wrapper::after {
+    text-stroke: var(--text-stroke);
+  }
+}
+
+.mood__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin: 8px;
+  padding: 0;
+}
+
+.mood__list li {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  -webkit-mask-image: url(../svg/romb.svg);
+  mask-image: url(../svg/romb.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.mood__list-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform-origin: center;
+  transform: scale(1);
+  opacity: 0.5;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.video-filter {
+  filter: saturate(0.7);
+}
+
+.mood__list li:hover .mood__list-item {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.mood__list li::before {
+  content: '';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  font-family: var(--text-font);
+  font-variation-settings: 'wght' 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFF;
+  text-shadow: 
+    0 0 1px #000, 
+    -10px 0 20px #000, 
+    10px 0 20px #000, 
+    0 -10px 20px #000, 
+    0 10px 20px #000;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+
+/* первая карточка */
+
+.card[data-mood-label="Start"] .mood__list li::before {
+  content: '- Start -';
+}
+
+/* вторая карточка */
+
+.card[data-mood-label="Interest"] .mood__list li::before {
+  content: '- Interest -';
+}
+
+/* третья карточка */
+
+.card[data-mood-label="Inspiration"] .mood__list li::before {
+  content: '- Inspiration -';
+}
+
+/* четвёртая карточка */
+
+.card[data-mood-label="Joy"] .mood__list li::before {
+  content: '- Joy -';
+}
+
+/* пятая карточка */
+
+.card[data-mood-label="Dialogue"] .mood__list li::before {
+  content: '- Dialogue -';
+}
+
+/* шестая карточка */
+
+.card[data-mood-label="Maneuvering"] .mood__list li::before {
+  content: '- Maneuvering -';
+}
+
+/* седьмая карточка */
+
+.card[data-mood-label="Shock"] .mood__list li::before {
+  content: '- Shock -';
+}
+
+/* восьмая карточка */
+
+.card[data-mood-label="Overkill"] .mood__list li::before {
+  content: '- Overkill -';
+}
+
+.mood__list li:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card__button-area {
+  display: flex;
+  margin: 25px;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  padding: 12px 37px;
+  font-size: 14px;
+  font-family: var(--accent-font), sans-serif;
+  background-image: linear-gradient(#000 0 0);
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0.3s 0.3s, color 0.5s 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #FFF;
+  background-size: 200%;
+  background-position: 100% 100%;
+}
+
+.button::after:hover {
+  transform: translateX(0%);
+  color: #FFF;
+}
+
+.card__icon-button {
+  height: 38px;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.heart {
+  transform-origin: center;
+  transform: scale(1);
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear 0s;
+}
+
+.contour {
+  transition: fill 0.1s linear 0s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon:hover .core {
+  fill: #000;
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .main-body {
+  fill: #000;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: big-heart 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: flying-sparks 0.3s ease-in 0.3s;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid currentColor;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 currentColor;
+}
+
+.button-text {
+  font-family: var(--accent-font), sans-serif;
+}
+
+.footer {
+  margin: 0 auto 100px;
+  width: var(--width);
+  text-align: center;
+}
+
+.open-button {
+  padding: 20px;
+}
+
+.memory-card[open] {
+  position: fixed;
+  inset-block: 50dvb;
+  width: 353px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr min-content;
+  align-items: center;
+  gap: 30px 20px;
+}
+
+.memory-card::backdrop {
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.floppy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dialog-text {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  font-weight: var(--text-wght);
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.close-button {
+  grid-column: 1 / 3;
+  grid-row: 2;
 }

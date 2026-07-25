@@ -1,1 +1,22 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --text-font: 'Inter-Flex-Variable';
+  --text-wght: 410;
+  --text-slnt: 0;
+  --accent-font: 'PressStart2P';
+  --accent-wght: 400;
+  --width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --border-content: 2px solid currentColor;
+  --header-padding: clamp(7.5rem, 7.2799rem + 0.939vw, 8.125rem);
+  --text-stroke: 1px #FFF;
+  --contour-color: #000;
+  --animation-fill-color: #FF0000;
+  --img-filter-card-2: saturate(0.2) contrast(0.9) brightness(1.1);
+  --img-filter-card-3: saturate(2.5) contrast(0.8);
+  --img-filter-card-4: hue-rotate(45deg);
+  --img-filter-card-5: invert(1) brightness(1.1) contrast(0.5);
+  --img-filter-card-6: sepia(0.9);
+  --img-filter-card-7: blur(10px) contrast(0.9) brightness(0.9);
+  --img-filter-card-8: hue-rotate(90deg) grayscale(0.1) saturate(1.5) contrast(0.5) blur(2px);
+  --size-img: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  --data-mood-label: attr(data-mood-label);
+}
