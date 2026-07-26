@@ -224,8 +224,8 @@
 
 /* шестая карточка */
 
-.card[data-mood-label="Maneuvering"] .mood__list li::before {
-  content: '- Maneuvering -';
+.card[data-mood-label="Adapt"] .mood__list li::before {
+  content: '- Adapt -';
 }
 
 /* седьмая карточка */
