@@ -21,16 +21,16 @@
     </header>
     
     <main>
-      <ul>
+      <ul class="card__list">
 
 <!---первая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Start">
+          <article class="card">
             <h2 class="card__title">
               Фритрек и нулевой спринт: Подготовка к работе
             </h2>
-            <div class="card__wrapper image-1">
+            <div class="card__wrapper">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -48,35 +48,12 @@
               на ваше будущее.
             </p>
 
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/girl.jpg"
-                  class="mood__list-item"
-                  alt="Девушка с цветами и телефоном лежит в поле с закрытими глазами"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/orig.jpg"
-                  class="mood__list-item"
-                  alt="Женские руки на клавиатуре ноутбука"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/bubbles.jpg"
-                  class="mood__list-item"
-                  alt="Мыльные пузыри, блестящие на солнце"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
+            <p class="card__text">
+              Место для ваших воспоминаний о начале обучения.
+            </p>
 
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -121,7 +98,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -131,11 +108,11 @@
 <!---вторая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Interest">
+          <article class="card">
             <h2 class="card__title">
               1 спринт: Я — чистый лист
             </h2>
-            <div class="card__wrapper image-2">
+            <div class="card__wrapper card__interest">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -155,36 +132,8 @@
               слишком сложно? что, если я не справлюсь?
             </p>
 
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/sea-storm.jpg"
-                  class="mood__list-item"
-                  alt="Картина с кораблём, плывущего в шторм"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/paint.jpg"
-                  class="mood__list-item"
-                  alt="Забавная интерпретация картины Ван Гога - Звёздная ночь, 
-                  но не с сине-жёлтыми, а чёрно-жёлтыми тонами. Внизу Снуппи смотрит на небо"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/clouds.jpg"
-                  class="mood__list-item"
-                  alt="Красивая фотография кучевых облаков, сфотографировано высоко в небе"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
-
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -229,7 +178,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -239,11 +188,11 @@
 <!---третья карточка--->
 
         <li>
-          <article class="card" data-mood-label="Inspiration">
+          <article class="card">
             <h2 class="card__title">
               1 спринт: А если не получится?
             </h2>
-            <div class="card__wrapper image-3">
+            <div class="card__wrapper card__inspiration">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -260,36 +209,9 @@
               провала. Или вы, наоборот, могли вдохновиться успехами 
               и поверить в себя.
             </p>
-            
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/woman-resting.jpg"
-                  class="mood__list-item"
-                  alt="Девушка отдыхает у окна, оперевшись на колени"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/flower.jpg"
-                  class="mood__list-item"
-                  alt="Красивый белый цветок на фоне листвы"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/foggy-window.jpg"
-                  class="mood__list-item"
-                  alt="Фотография заката, который виден через стекло в дождь"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
 
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -334,7 +256,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -344,11 +266,11 @@
 <!---четвёртая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Joy">
+          <article class="card">
             <h2 class="card__title">
               2 спринт: Погоня за идеалом
             </h2>
-            <div class="card__wrapper image-4">
+            <div class="card__wrapper card__joy">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -368,36 +290,8 @@
               старались просто сделать.
             </p>
             
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/notebook-1.jpg"
-                  class="mood__list-item"
-                  alt="Ноубут на столе с цветком и телефоном"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/sunset.jpg"
-                  class="mood__list-item"
-                  alt="Мультяшный рисунок девушки, которая любуюется на закат из своей комнаты"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/coffee-and-cake.jpg"
-                  class="mood__list-item"
-                  alt="Завтрак: рука держит чашку кофе с рисунком на пенке и бисквит 
-                  лежит на чёрной тарелке"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
-
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -442,7 +336,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -452,11 +346,11 @@
 <!---пятая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Dialogue">
+          <article class="card">
             <h2 class="card__title">
               2 спринт: О тех, кто рядом
             </h2>
-            <div class="card__wrapper image-5">
+            <div class="card__wrapper card__dialogue">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -475,38 +369,9 @@
               просто так не поддавался. Осваивать что-то новое легче, 
               когда рядом есть единомышленники, не правда ли?
             </p>
-            
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/wet-glass-1.jpg"
-                  class="mood__list-item"
-                  alt="Девушка прислонила ладонь к стеклу, смотрит в окно, 
-                  снаружи дождь, капли покрывают стекло"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/through-the-city.jpg"
-                  class="mood__list-item"
-                  alt="Мужчина в толстовке идёт по ночному городу, вокруг яркие огни"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/wet-glass-2.jpg"
-                  class="mood__list-item"
-                  alt="Мужчина читает книгу у окна, фотограф смотрит на него 
-                  через стекло с каплями дождя"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
 
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -551,7 +416,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -561,11 +426,11 @@
 <!---шестая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Adapt">
+          <article class="card">
             <h2 class="card__title">
               3 спринт: Обходные стратегии
             </h2>
-            <div class="card__wrapper image-6">
+            <div class="card__wrapper card__adapt">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -583,35 +448,8 @@
               на задачу под другим углом.
             </p>
 
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/mountain.jpg"
-                  class="mood__list-item"
-                  alt="Горный пейзаж с бликом от высокого солнца"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/moon.jpg"
-                  class="mood__list-item"
-                  alt="Большая луна розоватого цвета на фоне веток с красивыми цветами"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/snowy-mountains.jpg"
-                  class="mood__list-item"
-                  alt="Горный пейзаж на рассвете с заледеневшим озером на переднем плане"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
-
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -656,7 +494,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -666,11 +504,11 @@
 <!---седьмая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Shock">
+          <article class="card">
             <h2 class="card__title">
               3 спринт: Когда опускаются руки
             </h2>
-            <div class="card__wrapper image-7">
+            <div class="card__wrapper card__shock">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -689,35 +527,8 @@
               Вспомните, откуда вы её черпали.
             </p>
 
-            <ul class="mood__list">
-              <li>
-                <img
-                  src="./images/breathe.jpg"
-                  class="mood__list-item"
-                  alt="Листок со стикером Breathe, наклеенным на зеркало"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/meditation.jpg"
-                  class="mood__list-item"
-                  alt="Девушка медитирует в парке под деревом"
-                  loading="lazy"
-                >
-              </li>
-              <li>
-                <img
-                  src="./images/positive-vibes.jpg"
-                  class="mood__list-item"
-                  alt="Табличка с выложенными буквами Positive Vibes"
-                  loading="lazy"
-                >
-              </li>
-            </ul>
-
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -762,7 +573,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -772,11 +583,11 @@
 <!---восьмая карточка--->
 
         <li>
-          <article class="card" data-mood-label="Overkill">
+          <article class="card">
             <h2 class="card__title">
               «Сейчас я здесь»
             </h2>
-            <div class="card__wrapper image-8">
+            <div class="card__wrapper card__overkill">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -797,40 +608,12 @@
               Ведь часто путь — и есть результат.
             </p>
 
-            <ul class="mood__list">
-              <li>
-                <video
-                  src="https://v1.pinimg.com/videos/mc/720p/53/74/6e/53746e143a0347212c5bf56aa58a0291.mp4"
-                  class="mood__list-item video-filter"
-                  loading="lazy"
-                  autoplay
-                  loop
-                  muted
-                ></video>
-              </li>
-              <li>
-                <video
-                  src="https://v1.pinimg.com/videos/iht/expMp4/93/aa/74/93aa749bca64cfcd4ed5fd0ae6f817a2_720w.mp4"
-                  class="mood__list-item video-filter"
-                  loading="lazy"
-                  autoplay
-                  loop
-                  muted
-                ></video>
-              </li>
-              <li>
-                <video
-                  src="https://v1.pinimg.com/videos/iht/expMp4/70/05/21/7005211ca9850a408aed09f8829705b4_540w.mp4"
-                  class="mood__list-item video-filter"
-                  autoplay
-                  loop
-                  muted
-                ></video>
-              </li>
-            </ul>
+            <p class="card__text">
+              То же, что и в начале.
+            </p>
 
             <div class="card__button-area">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -875,7 +658,7 @@
                 </svg>
               </button>
 
-              <button class="card__like-button button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -886,7 +669,7 @@
       
     </main>
 
-    <footer class="footer">
+    <div class="open-button__area">
       <button
         class="button open-button"
         type="button"
@@ -896,7 +679,7 @@
         <svg
           width="21"
           height="21"
-          viewBox="0 0 21 21" 
+          viewBox="0 0 21 21"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use href="./svg/floppy.svg"></use>
@@ -909,7 +692,7 @@
           class="floppy"
           width="39"
           height="39"
-          viewBox="0 0 39 39" 
+          viewBox="0 0 39 39"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use href="./svg/floppy.svg"></use>
@@ -925,7 +708,7 @@
           <span class="button__text">Ok</span>
         </button>
       </dialog>
-    </footer>
+    </div>
 
     <script src="./scripts/like.js"></script>
   </body>
