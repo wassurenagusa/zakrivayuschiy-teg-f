@@ -112,7 +112,7 @@
             <h2 class="card__title">
               1 спринт: Я — чистый лист
             </h2>
-            <div class="card__wrapper card__interest">
+            <div class="card__wrapper card-interest">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -192,7 +192,7 @@
             <h2 class="card__title">
               1 спринт: А если не получится?
             </h2>
-            <div class="card__wrapper card__inspiration">
+            <div class="card__wrapper card-inspiration">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -270,7 +270,7 @@
             <h2 class="card__title">
               2 спринт: Погоня за идеалом
             </h2>
-            <div class="card__wrapper card__joy">
+            <div class="card__wrapper card-joy">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -350,7 +350,7 @@
             <h2 class="card__title">
               2 спринт: О тех, кто рядом
             </h2>
-            <div class="card__wrapper card__dialogue">
+            <div class="card__wrapper card-dialogue">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -430,7 +430,7 @@
             <h2 class="card__title">
               3 спринт: Обходные стратегии
             </h2>
-            <div class="card__wrapper card__adapt">
+            <div class="card__wrapper card-adapt">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -508,7 +508,7 @@
             <h2 class="card__title">
               3 спринт: Когда опускаются руки
             </h2>
-            <div class="card__wrapper card__shock">
+            <div class="card__wrapper card-shock">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -587,7 +587,7 @@
             <h2 class="card__title">
               «Сейчас я здесь»
             </h2>
-            <div class="card__wrapper card__overkill">
+            <div class="card__wrapper card-overkill">
               <img
                 class="card__wrapper-img"
                 src="./images/image-start.png"
@@ -666,49 +666,47 @@
         </li>
       </ul>
 
-      
-    </main>
-
-    <div class="open-button__area">
-      <button
-        class="button open-button"
-        type="button"
-        onclick="window['memory-card'].showModal()"
-        aria-controls="memory-card"
-      >
-        <svg
-          width="21"
-          height="21"
-          viewBox="0 0 21 21"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use href="./svg/floppy.svg"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-
-      <dialog class="memory-card" id="memory-card">
-        <svg
-          class="floppy"
-          width="39"
-          height="39"
-          viewBox="0 0 39 39"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use href="./svg/floppy.svg"></use>
-        </svg>
-        <h2 class="dialog-text">
-          Вставьте дискету, чтобы продолжить
-        </h2>
+      <div class="open-button__area">
         <button
-          class="button close-button"
+          class="button open-button"
           type="button"
-          onclick="window['memory-card'].close()"
+          onclick="window['memory-card'].showModal()"
+          aria-controls="memory-card"
         >
-          <span class="button__text">Ok</span>
+          <svg
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="./svg/floppy.svg"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
         </button>
-      </dialog>
-    </div>
+
+        <dialog class="memory-card" id="memory-card">
+          <svg
+            class="floppy"
+            width="39"
+            height="39"
+            viewBox="0 0 39 39"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="./svg/floppy.svg"></use>
+          </svg>
+          <h2 class="dialog-text">
+            Вставьте дискету, чтобы продолжить
+          </h2>
+          <button
+            class="button close-button"
+            type="button"
+            onclick="window['memory-card'].close()"
+          >
+            <span class="button__text">Ok</span>
+          </button>
+        </dialog>
+      </div>
+    </main>
 
     <script src="./scripts/like.js"></script>
   </body>

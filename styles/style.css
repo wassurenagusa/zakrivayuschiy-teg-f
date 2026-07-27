@@ -79,27 +79,27 @@
   object-position: 95%;
 }
 
-.card__wrapper.card__interest .card__wrapper-img {
+.card__wrapper.card-interest .card__wrapper-img {
   filter: var(--img-filter-card__interest);
 }
 
-.card__wrapper.card__inspiration .card__wrapper-img {
+.card__wrapper.card-inspiration .card__wrapper-img {
   filter: var(--img-filter-card__inspiration);
 }
 
-.card__wrapper.card__joy .card__wrapper-img {
+.card__wrapper.card-joy .card__wrapper-img {
   filter: var(--img-filter-card__joy);
 }
 
-.card__wrapper.card__dialogue .card__wrapper-img {
+.card__wrapper.card-dialogue .card__wrapper-img {
   filter: var(--img-filter-card__dialogue);
 }
 
-.card__wrapper.card__adapt .card__wrapper-img {
+.card__wrapper.card-adapt .card__wrapper-img {
   filter: var(--img-filter-card__adapt);
 }
 
-.card__wrapper.card__shock .card__wrapper-img {
+.card__wrapper.card-shock .card__wrapper-img {
   filter: var(--img-filter-card__shock);
 }
 
@@ -116,13 +116,13 @@
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   letter-spacing: 1px;
-  text-shadow: 0 0 5px var(--color);
+  text-shadow: 0 0 1px var(--color);
   opacity: 0.5;
   z-index: 1;
 }
 
 @supports (text-stroke: 1px #FFF) {
-  .card__wrapper::after {
+  .card__wrapper {
     -webkit-text-stroke: var(--text-stroke);
     text-stroke: var(--text-stroke);
     text-shadow: none;
@@ -131,6 +131,7 @@
 
 .card__button-area {
   display: flex;
+  gap: 4px;
   margin: 25px;
   justify-content: flex-end;
   align-items: center;
@@ -146,11 +147,11 @@
   cursor: pointer;
 }
 
-.button:before {
+.button::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: #000;
+  background: var(--button-before-color);
   transition: transform 0.5s ease-in-out;
   transform: translate(-100%);
   z-index: 0;
@@ -172,6 +173,7 @@
 }
 
 .card__icon-button {
+  width: 43px;
   height: 38px;
   padding: 0;
   background-color: transparent;
@@ -203,12 +205,12 @@
 }
 
 .like-icon:hover .core {
-  fill: #000;
+  fill: var(--hover-fill-color);
   transition: fill 0.3s linear 0s;
 }
 
 .like-icon:hover .main-body {
-  fill: #000;
+  fill: var(--hover-fill-color);
   transition: fill 0.3s linear 0.05s;
 }
 
@@ -246,7 +248,6 @@
 }
 
 .card__icon-button:focus-visible {
-  margin-right: 5px;
   border: 2px solid currentColor;
 }
 
