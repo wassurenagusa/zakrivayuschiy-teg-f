@@ -80,31 +80,31 @@
 }
 
 .card__wrapper.card-interest .card__wrapper-img {
-  filter: var(--img-filter-card__interest);
+  filter: var(--img-filter-card-interest);
 }
 
 .card__wrapper.card-inspiration .card__wrapper-img {
-  filter: var(--img-filter-card__inspiration);
+  filter: var(--img-filter-card-inspiration);
 }
 
 .card__wrapper.card-joy .card__wrapper-img {
-  filter: var(--img-filter-card__joy);
+  filter: var(--img-filter-card-joy);
 }
 
 .card__wrapper.card-dialogue .card__wrapper-img {
-  filter: var(--img-filter-card__dialogue);
+  filter: var(--img-filter-card-dialogue);
 }
 
 .card__wrapper.card-adapt .card__wrapper-img {
-  filter: var(--img-filter-card__adapt);
+  filter: var(--img-filter-card-adapt);
 }
 
 .card__wrapper.card-shock .card__wrapper-img {
-  filter: var(--img-filter-card__shock);
+  filter: var(--img-filter-card-shock);
 }
 
 .card__wrapper.card__overkill .card__wrapper-img {
-  filter: var(--img-filter-card__overkill);
+  filter: var(--img-filter-card-overkill);
 }
 
 .card__wrapper-label {
