@@ -121,8 +121,8 @@
   z-index: 1;
 }
 
-@supports (text-stroke: 1px #FFF) {
-  .card__wrapper {
+@supports (text-stroke: 1px #FFF) or (-webkit-text-stroke: 1px #FFF) {
+  .card__wrapper-label {
     -webkit-text-stroke: var(--text-stroke);
     text-stroke: var(--text-stroke);
     text-shadow: none;
